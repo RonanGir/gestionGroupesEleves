@@ -9,7 +9,12 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TestClasseTest {
+import entite.Classe;
+import entite.Eleve;
+import entite.Instituteur;
+import entite.Parent;
+
+class TestClasse {
 
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	private String nom;
