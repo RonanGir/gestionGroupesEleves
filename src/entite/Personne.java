@@ -51,6 +51,13 @@ public class Personne {
 	public void setDdn(Date ddn) {
 		this.ddn = ddn;
 	}
+
+	@Override
+	public String toString() {
+		return "Personne [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", ddn=" + ddn + "]";
+	}
+	
+	
 	
 	
 	
