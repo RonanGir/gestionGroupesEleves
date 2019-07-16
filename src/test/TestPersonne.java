@@ -1,7 +1,6 @@
-package fr.eni.ecole.poo.groupeeleves.test;
+package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,9 +9,10 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import fr.eni.ecole.poo.groupeeleves.entite.Personne;
+import entite.Personne;
 
 class TestPersonne {
+
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	private String nom;
 	private String prenom;

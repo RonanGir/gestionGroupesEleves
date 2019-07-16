@@ -1,9 +1,6 @@
-package fr.eni.ecole.poo.groupeeleves.test;
+package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,12 +9,8 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import fr.eni.ecole.poo.groupeeleves.entite.Classe;
-import fr.eni.ecole.poo.groupeeleves.entite.Eleve;
-import fr.eni.ecole.poo.groupeeleves.entite.Instituteur;
-import fr.eni.ecole.poo.groupeeleves.entite.Parent;
+class TestClasseTest {
 
-class TestClasse {
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	private String nom;
 	private Eleve e1, e2;
@@ -111,5 +104,6 @@ class TestClasse {
 		assertNotNull(p);
 		assertEquals(p1, p);
 	}
+
 
 }
