@@ -29,8 +29,8 @@ public class Eleve extends Personne implements Comparable<Eleve>{
 	}
 
 	@Override
-	public int compareTo(Eleve o) {
-		return 0;
+	public int compareTo(Eleve e) {
+		return this.getPrenom().compareTo(e.getPrenom());
 		
 	}
 	

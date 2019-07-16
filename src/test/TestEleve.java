@@ -47,6 +47,9 @@ class TestEleve {
 		assertEquals(adresse, e.getAdresse());
 		assertEquals(ddn, e.getDdn());
 		assertEquals(referent, e.getReferent());
+		// Renvoi zéro si les expressions sont identiques.
+		// Validation du bon fonctionnement du compareTo.
+		assertEquals(0, prenom.compareTo(e.getPrenom()));
 		
 	}
 
