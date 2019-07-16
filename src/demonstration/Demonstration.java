@@ -1,13 +1,13 @@
-package fr.eni.ecole.poo.groupeeleves.demonstration;
+package demonstration;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import fr.eni.ecole.poo.groupeeleves.entite.Classe;
-import fr.eni.ecole.poo.groupeeleves.entite.ClasseException;
-import fr.eni.ecole.poo.groupeeleves.entite.Eleve;
-import fr.eni.ecole.poo.groupeeleves.entite.Instituteur;
-import fr.eni.ecole.poo.groupeeleves.entite.Parent;
+import entite.Classe;
+//import fr.eni.ecole.poo.groupeeleves.entite.ClasseException;
+import entite.Eleve;
+import entite.Instituteur;
+import entite.Parent;
 
 public class Demonstration {
 
