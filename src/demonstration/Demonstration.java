@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import entite.Classe;
-//import fr.eni.ecole.poo.groupeeleves.entite.ClasseException;
+import entite.ClasseException;
 import entite.Eleve;
 import entite.Instituteur;
 import entite.Parent;

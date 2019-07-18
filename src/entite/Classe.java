@@ -20,7 +20,6 @@ public class Classe {
 	public Classe(String nom) {
 		setNom(nom);
 		lstEleves = new ArrayList<Eleve>();
-		lstParent = new ArrayList<Parent>();
 	}
 	
 	// Accesseurs
@@ -41,6 +40,7 @@ public class Classe {
 	}
 
 	public List<Parent> getListParent() {
+		lstParent = new ArrayList<Parent>();
 		for (Eleve e : lstEleves) {
 			if (!lstParent.contains(e.getReferent())) {
 				lstParent.add(e.getReferent());
@@ -64,15 +64,21 @@ public class Classe {
 	
 	// Méthodes
 	public void addEleve(Eleve e) {
-		lstEleves.add(e);
+		if (e != null)
+			lstEleves.add(e);
 	}
 	
 	public void removeEleve(Eleve e) {
 		lstEleves.remove(e);
 	}
 	
-	public Eleve getEleve(Integer i) {
-		return lstEleves.get(i);
+	public Eleve getEleve(Integer i) throws ClasseException {
+		try {
+			return lstEleves.get(i);
+			
+		} catch (Exception e) {
+			throw new ClasseException("Le nombre d'élève de la classe est de " + lstEleves.size() + " élèves");
+		}
 	}
 	
 	public void sortListEleve() {
@@ -82,8 +88,19 @@ public class Classe {
 
 	@Override
 	public String toString() {
-		return "Classe [nom=" + nom + ", instituteur=" + instituteur + ", lstEleves=" + lstEleves + ", lstParent="
-				+ lstParent + "]";
+		StringBuffer stringify = new StringBuffer();
+		stringify.append("Classe : ").append(this.getNom()).append("\n");
+		stringify.append("\t Instituteur : ")
+				 .append(this.instituteur.getPrenom())
+				 .append(" ")
+				 .append(this.instituteur.getNom());
+		for (Eleve e : lstEleves) {
+			stringify.append(e.getPrenom())
+					 .append(" ")
+					 .append(e.getNom())
+					 .append("\n");
+		}
+		return stringify.toString();
 	}
 	
 	
